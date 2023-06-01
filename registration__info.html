@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/registration.css">
+    <link rel="stylesheet" href="style/multiselect.css">
+    <link rel="stylesheet" href="style/registhotel.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="stylesheet" href="style/adaptiveforms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form"action="" method="post">
+            <div class="form__box">
+                <h1 class="form__title">
+                    Реєстрація
+                </h1>
+
+                <input id="so_file" type="file" style="display:none;"/>
+                <button class="form__profile" id="bntUpload"></button>
+                <p class="form__text">
+                    Добавте фотографію свого профілю
+                </p>
+
+
+                <p class="form__textbox">
+                    Добавте кілька тегів послуг, які ви надаєте
+                </p>
+                <div class="form__input" role="select" name="myselect">
+                    <option value="Значение 1" selected>Сноуборд</option>
+                    <option value="Значение 2" selected>Лижі</option>
+
+                </div><button class="form__addoption">+</button>
+
+                
+                <input type="text" class="form__inputtext" placeholder=" Додайте опис свого роду діяльності*">
+                <button class="form__button">
+                    <a href="user__panel/profilestart.html" class="button__link">
+                        Далі
+                    </a>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script/selectfile.js"></script>
+    <script src="script/multiselect.js"></script>
+</body>
+</html>

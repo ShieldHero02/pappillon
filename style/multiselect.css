@@ -1,0 +1,59 @@
+[role="select"] {
+    display: inline-block;
+    position: relative;
+  }
+  [role="select"] > [role="field"] {
+    display: block;
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    width: 300px;
+    min-height: 27px;
+    padding: 1px;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: #F2F5F8;
+    cursor: default;
+    font-size: 13px;
+    font-family: arial;
+  }
+  [role="select"] > [role="field"] > [role="tag"] {
+    display: inline-block;
+    background-color: #E6E6E6;
+    padding: 3px;
+    margin: 1px;
+    border-radius: 3px;
+  }
+  [role="select"] > [role="field"] > [role="tag"] > [role="remove"] {
+      display: inline-flex;
+      margin-left: 3px;
+      border-radius: 50%;
+      background-color: #cfcfcf;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+  }
+  [role="select"] > [role="list"] {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: -1px 0 0 0;
+    border: 1px solid #a9a9a9;
+    background-color: white;
+    font-size: 13px;
+    font-family: arial;
+  }
+  [role="select"] > [role="list"] > option {
+    display: block;
+    color: black;
+    cursor: pointer;
+  }
+  [role="select"] > [role="list"] > option:hover {
+    background-color: #1b8bfa;
+    color: white;
+  }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/registhotel.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form"action="" method="post">
+            <div class="form__box">
+                <h1 class="form__title">
+                    Реєстрація
+                </h1>
+                <input type="text" class="form__input" placeholder=" Назва садиби або готелю*">
+
+                <input id="so_file" type="file" style="display:none;"/>
+                <button class="form__file" id="bntUpload"></button>
+                <p class="form__text">
+                    Загрузіть кілька фотографій
+                </p>
+
+                <button class="form__button">
+                    <a href="registration__info.html" class="button__link">
+                        Далі
+                    </a>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script/selectfile.js"></script>
+</body>
+</html>
