@@ -12,6 +12,20 @@ body {
     margin: 0 auto;
     max-width: 1440px;
 }
+.form__publication {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form__block {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px #bbb;
+    padding: 20px 30px;
+}
+.form__flexcolumn {
+    display: flex;
+    flex-direction: column;
+}
 .header {
     border-bottom: 1px solid #9A9A9A;
 }
@@ -84,12 +98,24 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.content__publcation-block {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.content__recomendation-img {
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #bbb;
+}
 .filter__minimum , .filter__medium , .filter__max {
     font-family: 'Inter', sans-serif;
     margin-right: 90px;
 }
 .slidecontainer {
-    width: 300px; /* Width of the outside container */
+    width: 300px;
     position: relative;
     padding-right: 32px;
 }
@@ -115,37 +141,34 @@ body {
 .form__checkbox {
     margin-top: 30px;
 }
-/* The slider itself */
 .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 250px; /* Full-width */
-    height: 2px; /* Specified height */
-    background: #31714E; /* Grey background */
-    outline: none; /* Remove outline */ /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    width: 250px;
+    height: 2px; 
+    background: #31714E; 
+    outline: none;
+    -webkit-transition: .2s; 
     transition: opacity .2s;
 }
-/* Mouse-over effects */
 .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1; 
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 17px; /* Set a specific slider handle width */
-    height: 17px; /* Slider handle height */
-    background: #31714E; /* Green background */
+    width: 17px; 
+    height: 17px; 
+    background: #31714E;
     border-radius: 50px;
-    cursor: pointer; /* Cursor on hover */
+    cursor: pointer; 
 }
 .slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 25px; 
+    height: 25px; 
+    background: #4CAF50; 
+    cursor: pointer; 
 }
 .form__places {
     display: flex;

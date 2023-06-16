@@ -171,4 +171,5 @@ input[type='file'] {
     cursor: pointer;
     color: #828282;
     outline: none;
+    margin-bottom: 18px;
 }

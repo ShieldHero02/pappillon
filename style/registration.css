@@ -18,6 +18,15 @@ body {
     margin-right: auto;
     margin-top: 100px;
 }
+.error {
+    padding: 10px 20px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    background-color: red;
+    border-radius: 10px;
+}
 .form__box {
     display: flex;
     flex-direction: column;

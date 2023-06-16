@@ -1,3 +1,25 @@
+<?php
+    error_reporting(0);
+
+    require_once "../controllers/db.php";
+    require_once "log.php";
+
+    $email = $_COOKIE['email'];
+    $password = $_COOKIE['password'];
+    
+    $query__email = mysqli_query($db__connect , "SELECT `email` FROM `users__information` WHERE `email` = '$email';");
+    $query__password = mysqli_query($db__connect , "SELECT `password` FROM `users__information` WHERE `password` = '$password';");
+    $query__all = mysqli_query($db__connect , "SELECT * FROM `users__information` WHERE `email` = '$email';");
+
+    $query__result__email = mysqli_fetch_assoc($query__email);
+    $query__result__password = mysqli_fetch_assoc($query__password);
+    $query__result__all = mysqli_fetch_assoc($query__all);
+
+    $result__email = $query__result__email['email'];
+    $result__password = $query__result__password['password'];
+    $result__nameuser = $query__result__all['name']; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="../fonts/style.css">
-    <link rel="stylesheet" href="style/adaptiveprofile.css">
+    <link rel="stylesheet" href="style/adaptivemain.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -19,13 +41,13 @@
     <header class="header">
         <div class="container">
             <div class="header__block">
-                <a href="index.html">
+                <a class="header__logo" href="">
                     <img src="../images/Papillon.png" alt="">
                 </a>
                 <div class="header__box">
                     <input class="header__input" type="text" placeholder="          Search here...">
-                    <a href="publication.html" class="header__user">
-                        <img class="header__user-img" src="../images/davinchi.png" alt="">
+                    <a href="changeprofile.php" class="header__user">
+                        <img class="header__user-img" src="../images/user.png" alt="">
                     </a>
                 </div>
             </div>
@@ -103,11 +125,71 @@
                     <div class="content__recomendations">
                         <h2 class="content__title">
                             Рекомендації
-                        </h2>                  
+                        </h2>
+                        <div class="content__recomendation">
+                            
+                            <div class="content__publcation-block">
+                                <?php
+                                    $min__id__query = mysqli_query($db__connect , "SELECT MIN(`id`) FROM `publication`;");
+                                    $min__id__result = mysqli_fetch_assoc($min__id__query);
+                                    
+                                    $max__id__query = mysqli_query($db__connect , "SELECT MAX(`id`) FROM `publication`;");
+                                    $max__id__result = mysqli_fetch_assoc($max__id__query);
+                                    
+                                    foreach ($min__id__result as $min__id)
+                                    foreach ($max__id__result as $max__id)
+                                                
+
+                                    for ($i = $min__id; $i <= $max__id; $i++)
+                                    {
+                                        $publication__query = mysqli_query($db__connect , "SELECT * FROM `publication` WHERE `id` = $i;");
+                                        $publication__result = mysqli_fetch_assoc($publication__query);
+                                        $path = "user__panel/";
+
+                                        if ($publication__result != null)
+                                        {
+                                            echo  "<div class='content__recomendation-box'>";
+                                            echo  "<img class='content__recomendation-img' src=".$publication__result['image']." alt=''>";
+                                            echo  "<div class='content__recomendation-comment'>";
+                                            echo  "<div class='content__user'>";
+                                            echo  "<img class='content__user-img' src='images/davinchi.png' alt=''>";
+                                            echo  "<div class='content__user-info'>";
+                                            echo  "<p class='content__user-text blue'>".$publication__result['user__name']."</p>";
+                                            echo  "<div class='content__user-place'>";
+                                            echo  "<img class='content__point-img' src='images/point.png' alt=''>";
+                                            echo  "</div>";
+                                            echo  "</div>";
+                                            echo  "</div>";
+                                            echo  "<div class='content__do'>";
+                                            echo  "<img class='content__do-img' src='images/like.png' alt=''>";
+                                            echo  "<img class='content__do-img' src='images/comment.png' alt=''>";
+                                            echo  "<img class='content__do-img' src='images/repost.png' alt=''>";
+                                            echo  "</div>";
+                                            echo  "</div>";
+                                            echo  "<p class='content__under-do center'>".$publication__result['text']."</p>";
+                                            echo  "</div>";
+                                        }
+                                        else
+                                        {
+                                            echo "<p class='error'>Ще немає ніякої публікації!";
+                                        }
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
     <footer class="footer">
         <div class="container">
             <div class="footer__block">
