@@ -1,0 +1,137 @@
+.content__profile {
+    background-image: url("../user__panel/images/background__profile.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    width: 1000px;
+}
+.content__box {
+    color: #FFF;
+}
+.content__username {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+.content__level {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.content__order {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #31714E;
+}
+.content__button {
+    border: none;
+    background-color: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+.content__orderbox-center {
+    border-left: 1px solid #31714E;
+    border-right: 1px solid #31714E;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.bold {
+    font-weight: 700;
+    font-size: 15px;
+}
+.right {
+    margin-right: 180px;
+}
+.content__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content__recomendation-end {
+    color: #282E6A;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 12px;
+    text-align: right;
+    position: relative;
+}
+.space {
+    display: flex;
+    justify-content: space-between;
+}
+.center__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.content__profilestart {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content__avatar {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content__profilebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.content__profiletext {
+    max-width: 297px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+.content__message {
+    color: #FFF;
+    background-color: #31714E;
+    padding: 15px 77px 15px 77px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+.content__call {
+    padding: 15px 77px 15px 77px;
+    color: #31714E;
+    text-decoration: none;
+    border: 4px solid #31714E;
+    border-radius: 50px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+.content__flex-form {
+    display: flex;
+    flex-direction: column;
+}
+.form__textarea {
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #bbb;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    outline: none;
+    resize: none;
+    padding: 5px;
+    font-family: 'Gilroy';
+}

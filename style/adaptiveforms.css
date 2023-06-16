@@ -1,0 +1,9 @@
+@media (max-width: 320px) 
+{
+    .form {
+        border-left: none;
+        border-right: none;
+        border-top: 9px solid #31714E;
+        border-bottom: 9px solid #31714E;
+    }
+}
